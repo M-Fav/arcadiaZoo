@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  # PostgreSQL
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: arcadia_db
+      POSTGRES_USER: arcadia_user
+      POSTGRES_PASSWORD: arcadia_password
+
+  # Spring Boot
+  app:
+    build: .
+    ports:
+      - "8080:8080"  
+    depends_on:
+      - db  
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/arcadia_db
+      SPRING_DATASOURCE_USERNAME: arcadia_user
+      SPRING_DATASOURCE_PASSWORD: arcadia_password
