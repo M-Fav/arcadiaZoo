@@ -8,10 +8,10 @@
 		<version>3.2.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.arcadia</groupId>
-	<artifactId>arcadia</artifactId>
+	<groupId>com.arcadiaZoo</groupId>
+	<artifactId>arcadiaZoo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>arcadia</name>
+	<name>arcadiaZoo</name>
 	<description>ECF</description>
 	<properties>
 		<java.version>17</java.version>

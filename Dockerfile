@@ -5,7 +5,10 @@ FROM khipu/openjdk17-alpine
 WORKDIR /app
 
 # Copie du jar de l'application dans le conteneur
-COPY target/arcadia-0.0.1-SNAPSHOT.jar /app/arcadia.jar
+COPY target/arcadiaZoo-0.0.1-SNAPSHOT.jar /app/arcadiaZoo.jar
+
+# Afficher le contenu du r�pertoire
+RUN ls -l /app
 
 # Commande par défaut pour démarrer l'application Spring Boot
-CMD ["java", "-jar", "arcadia.jar"]
+CMD ["java", "-jar", "arcadiaZoo.jar"]
