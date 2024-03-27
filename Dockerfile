@@ -1,6 +1,8 @@
 # Utilisation de l'image de base adoptopenjdk avec OpenJDK 17
 FROM khipu/openjdk17-alpine
 
+EXPOSE 5432
+
 # Répertoire de travail dans le conteneur
 WORKDIR /app
 
